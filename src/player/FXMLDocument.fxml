@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="346.0" prefWidth="483.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="player.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <BorderPane depthTest="ENABLE" layoutX="9.0" layoutY="12.0" prefHeight="281.0" prefWidth="422.0" stylesheets="@style.css">
+         <bottom>
+            <VBox prefHeight="52.0" prefWidth="422.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Slider fx:id="slider" prefHeight="14.0" prefWidth="380.0" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleSlow" text="&lt;&lt;" />
+                        <Button mnemonicParsing="false" onAction="#handleButtonAction" text="Open" />
+                        <Button mnemonicParsing="false" onAction="#handlePlay" text="Play" />
+                        <Button mnemonicParsing="false" onAction="#handlePause" text="Pause" />
+                        <Button mnemonicParsing="false" onAction="#handleStop" text="Stop" />
+                        <Button mnemonicParsing="false" onAction="#handleExit" text="Exit" />
+                        <Button mnemonicParsing="false" onAction="#handleFast" text="&gt;&gt;" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MediaView fx:id="mediaview" fitHeight="200.0" fitWidth="200.0" />
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+    </children>
+</AnchorPane>
